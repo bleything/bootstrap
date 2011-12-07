@@ -1,0 +1,18 @@
+{
+    "run_list": [
+        "role[osx]"
+    ],
+
+    "hostname": "example",
+
+    "alfred": {
+        "sync_folder": "/Users/someguy/Dropbox/Sync Folders/Alfred",
+        "email": "someguy@xample.com",
+        "key": "LIC-EN-SE"
+    },
+
+    "1password": {
+        "name": "Some Guy",
+        "key": "LI-CE-NS-E"
+    }
+}
