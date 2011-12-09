@@ -6,6 +6,12 @@ run_list %w(
   recipe[apps::chrome]
   recipe[apps::dropbox]
 
+  recipe[config::dock]
+  recipe[config::finder]
+  recipe[config::global]
+  recipe[config::hostname]
+  recipe[config::screensaver]
+
   recipe[homebrew]
   recipe[homebrew::packages]
 )
