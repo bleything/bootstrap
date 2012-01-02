@@ -38,15 +38,23 @@ Contributions and Thanks
 
 Contributions from:
 
-* [Grégory Karékinian](https://github.com/gkarekinian)
+* [Grégory Karékinian][gkarekinian]
 
 The `vendored_cookbooks` directory contains cookbooks by:
 
-* [Graeme Mathieson](https://github.com/mathie) (homebrew)
-* [Joshua Timberman](https://github.com/jtimberman) (1password, dmg, mac_os_ox)
+* [Graeme Mathieson][mathie] ([homebrew])
+* [Joshua Timberman][jtimberman] (1password, [dmg], [mac_os_x])
 
 Those cookbooks are licensed under different terms; see their respective
 READMEs for details.
+
+[gkarekinian]: https://github.com/gkarekinian
+[mathie]: https://github.com/mathie
+[jtimberman]: https://github.com/jtimberman
+
+[homebrew]: https://github.com/mathie/chef-homebrew
+[dmg]: https://github.com/opscode/cookbooks/tree/master/dmg
+[mac_os_x]: https://github.com/jtimberman/mac_os_x-cookbook
 
 The MIT License
 ------------------------------------------------------------------------
