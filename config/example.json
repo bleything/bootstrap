@@ -1,18 +1,43 @@
 {
-    "run_list": [
-        "role[osx]"
-    ],
-
     "hostname": "example",
 
+    "run_list": [
+        "recipe[apps::1password]",
+        "recipe[apps::alfred]",
+        "recipe[apps::chrome]",
+        "recipe[apps::dropbox]",
+
+        "recipe[config::dock]",
+        "recipe[config::finder]",
+        "recipe[config::global]",
+        "recipe[config::hostname]",
+        "recipe[config::screensaver]",
+
+        "recipe[homebrew]",
+        "recipe[homebrew::packages]"
+    ],
+
+    "homebrew": {
+        "packages": [
+            "ack",
+            "git",
+            "macvim",
+            "par",
+            "unison"
+        ]
+    },
+
     "alfred": {
-        "sync_folder": "/Users/someguy/Dropbox/Sync Folders/Alfred",
+        "sync_folder": "/Users/someguy/Dropbox/.sync/Alfred",
         "email": "someguy@xample.com",
         "key": "LIC-EN-SE"
     },
 
     "one_password": {
         "name": "Some Guy",
-        "key": "LI-CE-NS-E"
+        "key": "LIC-EN-SE"
+
+        "version": "3.8.12",
+        "checksum": "9e7ad33a876ce9a5d1a63438d95619ca0e3240af"
     }
 }
