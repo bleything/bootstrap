@@ -33,6 +33,21 @@ How Do?
 * edit your json file to taste
 * `rake converge[whatever]`
 
+Contributions and Thanks
+------------------------------------------------------------------------
+
+Contributions from:
+
+* [Grégory Karékinian](https://github.com/gkarekinian)
+
+The `vendored_cookbooks` directory contains cookbooks by:
+
+* [Graeme Mathieson](https://github.com/mathie) (homebrew)
+* [Joshua Timberman](https://github.com/jtimberman) (1password, dmg, mac_os_ox)
+
+Those cookbooks are licensed under different terms; see their respective
+READMEs for details.
+
 The MIT License
 ------------------------------------------------------------------------
 
