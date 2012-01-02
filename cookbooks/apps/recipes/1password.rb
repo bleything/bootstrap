@@ -32,8 +32,8 @@ settings = {
   "AGAskedAboutBrowserExtensions" => false,
   "keychainRotationFrequency"     => 10,
   "License"                       => {
-    "Person" => node['1password'].name,
-    "Serial" => node['1password'].key
+    "Person" => node['one_password'].name,
+    "Serial" => node['one_password'].key
   }
 }
 
