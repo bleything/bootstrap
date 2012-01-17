@@ -10,6 +10,7 @@
         "recipe[config::dock]",
         "recipe[config::finder]",
         "recipe[config::global]",
+        "recipe[config::hot_corners]",
         "recipe[config::hostname]",
         "recipe[config::screensaver]",
 
