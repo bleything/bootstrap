@@ -6,6 +6,7 @@
         "recipe[apps::alfred]",
         "recipe[apps::chrome]",
         "recipe[apps::dropbox]",
+        "recipe[apps::grandperspective]",
         "recipe[apps::vlc]",
 
         "recipe[config::dock]",
