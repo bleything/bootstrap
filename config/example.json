@@ -23,6 +23,7 @@
     "homebrew": {
         "packages": [
             "ack",
+            "dos2unix",
             "git",
             "gnupg",
             "macvim",
