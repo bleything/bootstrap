@@ -23,10 +23,15 @@
     "homebrew": {
         "packages": [
             "ack",
+            "autoconf",
+            "automake",
             "dos2unix",
             "git",
             "gnupg",
             "macvim",
+            "ispell",
+            "md5sha1sum",
+            "p7zip",
             "par",
             "pstree",
             "s3cmd",
