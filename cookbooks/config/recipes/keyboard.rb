@@ -1,8 +1,8 @@
 #
 # Cookbook Name:: config
-# Recipe:: global
+# Recipe:: keyboard
 #
-# Copyright 2011, Ben Bleything <ben@bleything.net>
+# Copyright 2012, Ben Bleything <ben@bleything.net>
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,17 +17,13 @@
 # limitations under the License.
 #
 
-settings = {
-  # expand file and print dialogs
-  "NSNavPanelExpandedStateForSaveMode" => true,
-  "PMPrintingExpandedStateForPrint"    => true,
-
-  # look and feel
-  "AppleAquaColorVariant" => 6,
-  "AppleHighlightColor"   => "1.000000 0.823500 0.505900"
+global_settings = {
+  # fix up keyboard
+  "ApplePressAndHoldEnabled"             => false,
+  "NSAutomaticSpellingCorrectionEnabled" => false,
 }
 
-settings.each do |k,v|
+global_settings.each do |k,v|
   mac_os_x_userdefaults k do
     global true
     key    k

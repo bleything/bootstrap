@@ -14,6 +14,7 @@
         "recipe[config::global]",
         "recipe[config::hot_corners]",
         "recipe[config::hostname]",
+        "recipe[config::keyboard]",
         "recipe[config::screensaver]",
 
         "recipe[homebrew]",
