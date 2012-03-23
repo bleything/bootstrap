@@ -10,25 +10,17 @@ tunable later, but... lazy :D
 Prerequisites
 ------------------------------------------------------------------------
 
-You've got choices! If you want, you can try the [OSX GCC Installer],
-but you won't be able to build anything that needs the Cocoa headers...
-that means no MacVim or Cocoa Emacs.
+First off, install Xcode from the App Store. Next, make sure the
+Command Line Tools are installed, by going into Xcode's Preferences,
+selecting the Downloads tab, and installing the Command Line Tools.
 
-Alternately, you can install XCode from the App Store... but then you'll
-have the LLVM version of GCC and won't be able to build (for instance)
-[Ruby Enterprise Edition].
-
-To be safe, install both.
-
-You'll also need to install chef.
-
-[OSX GCC Installer]: https://github.com/kennethreitz/osx-gcc-installer/downloads
-[Ruby Enterprise Edition]: http://www.rubyenterpriseedition.com
+You'll also need to have bundler installed.
 
 How Do?
 ------------------------------------------------------------------------
 
 * check out the repo
+* `bundle install`
 * copy `config/example.json` to `config/whatever.json`
 * edit your json file to taste
 * `rake converge[whatever]`
