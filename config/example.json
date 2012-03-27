@@ -18,10 +18,15 @@
         "recipe[config::screensaver]",
 
         "recipe[homebrew]",
+        "recipe[homebrew::taps]",
         "recipe[homebrew::packages]"
     ],
 
     "homebrew": {
+        "taps": [
+            "homebrew/dupes"
+        ],
+
         "packages": [
             "ack",
             "autoconf",

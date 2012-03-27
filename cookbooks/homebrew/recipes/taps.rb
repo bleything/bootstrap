@@ -1,8 +1,8 @@
 #
 # Cookbook Name:: homebrew
-# Recipe:: packages
+# Recipe:: taps
 #
-# Copyright 2011-2012, Ben Bleything <ben@bleything.net>
+# Copyright 2012, Ben Bleything <ben@bleything.net>
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,6 +18,7 @@
 #
 
 include_recipe 'homebrew'
-include_recipe 'homebrew::taps'
 
-node.homebrew.packages.each {|p| package p }
+node.homebrew.taps.each do |tap|
+  homebrew_tap tap
+end
