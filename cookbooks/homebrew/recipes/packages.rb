@@ -20,4 +20,25 @@
 include_recipe 'homebrew'
 include_recipe 'homebrew::taps'
 
-node.homebrew.packages.each {|p| package p }
+node.homebrew.packages.each do |pkg|
+  case pkg
+  when String
+    package pkg
+  when Hash
+    cmd = [ "brew install", pkg['package'] ]
+
+    cmd << '--HEAD' if pkg['head']
+    cmd << pkg['args']
+
+    cmd_string = cmd.compact.join(" ")
+    execute(cmd_string) do
+      not_if { ::File.directory?("/usr/local/Cellar/#{pkg['package']}") }
+    end
+
+    ### we have to unlink before we re-link :/
+    if pkg['link']
+      execute "brew unlink #{pkg['package']}"
+      execute "brew link #{pkg['package']}"
+    end
+  end
+end

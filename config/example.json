@@ -32,6 +32,11 @@
             "autoconf",
             "automake",
             "dos2unix",
+            {
+                "package": "emacs",
+                "head": true,
+                "args": "--cocoa --srgb --use-git-head"
+            },
             "git",
             "gnupg",
             "hub",
