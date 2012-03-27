@@ -29,6 +29,7 @@
             "dos2unix",
             "git",
             "gnupg",
+            "hub",
             "macvim",
             "ispell",
             "md5sha1sum",
