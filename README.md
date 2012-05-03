@@ -40,6 +40,11 @@ How Do?
 Contributions and Thanks
 ------------------------------------------------------------------------
 
+My employer ([LivingSocial]) sponsors some of the work I do on this
+project, and I note that in the files they own.
+
+[LivingSocial]: http://livingsocial.com
+
 Contributions from:
 
 * [Grégory Karékinian][gkarekinian]
