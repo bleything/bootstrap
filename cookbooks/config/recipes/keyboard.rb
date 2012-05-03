@@ -25,6 +25,7 @@ global_settings = {
 
 global_settings.each do |k,v|
   mac_os_x_userdefaults k do
+    domain 'NSGlobalDomain'
     global true
     key    k
     value  v
