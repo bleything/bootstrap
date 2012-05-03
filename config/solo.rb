@@ -9,3 +9,5 @@ cookbook_path [
   "#{current_dir}/../cookbooks",
   "#{current_dir}/../vendored_cookbooks"
 ]
+
+Ohai::Config[:disabled_plugins] = %w(java)
