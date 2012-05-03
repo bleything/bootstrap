@@ -30,3 +30,26 @@ global_settings.each do |k,v|
     value  v
   end
 end
+
+MissionControl.move_left  :disabled
+MissionControl.move_right :disabled
+MissionControl.desktop_1  :disabled
+
+
+
+hotkey_enabled = {
+  # Mission Control: use F9 to display instead of ctrl-up arrow
+  44 => false,
+  46 => false,
+
+  # Mission Control: move left a space (ctrl-left arrow)
+  79 => false,
+  80 => false,
+
+  # Mission Control: move right a space (ctrl-right arrow)
+  81 => false,
+  82 => false,
+
+  # Mission Control: Switch to Desktop 1 (ctrl-1)
+  118 => false,
+}
