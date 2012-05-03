@@ -18,13 +18,13 @@
 #
 
 execute "scutil --set LocalHostName #{node.hostname}" do
-  not_if Proc.new { `scutil --get LocalHostName`.chomp == node.hostname }
+  not_if { `scutil --get LocalHostName`.chomp == node.hostname }
 end
 
 execute "scutil --set HostName #{node.hostname}" do
-  not_if Proc.new { `scutil --get HostName`.chomp == node.hostname }
+  not_if { `scutil --get HostName`.chomp == node.hostname }
 end
 
 execute "networksetup -setcomputername #{node.hostname}" do
-  not_if Proc.new { `networksetup -getcomputername`.chomp == node.hostname }
+  not_if { `networksetup -getcomputername`.chomp == node.hostname }
 end

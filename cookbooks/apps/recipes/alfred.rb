@@ -21,7 +21,7 @@ include_recipe 'dmg'
 include_recipe 'mac_os_x'
 
 mac_os_x_plist_file 'com.alfredapp.Alfred.plist' do
-  not_if Proc.new { File.exists?("#{ENV['HOME']}/Library/Preferences/#{name}") }
+  not_if { File.exists?("#{ENV['HOME']}/Library/Preferences/#{name}") }
 end
 
 if node.alfred.attribute?('sync_folder')
