@@ -1,0 +1,12 @@
+################################################################################
+### This file installed by bootstrap. If you run bootstrap again, you'll lose
+### any changes made here.
+################################################################################
+
+### source the system profile
+if [ -e "/etc/profile" ]; then
+    source /etc/profile
+fi
+
+### source all the various stuff others have dropped in
+source ~/.bash.d/*

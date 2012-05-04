@@ -1,0 +1,9 @@
+################################################################################
+### This file installed by bootstrap. If you run bootstrap again, you'll lose
+### any changes made here.
+################################################################################
+#
+# This directory (~/.bash.d) is a good place to put any bash customizations
+# you'd like to make. Just create a file in this directory and it'll be sourced
+# by ~/.bashrc.
+#
