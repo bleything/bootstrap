@@ -6,7 +6,9 @@
         "recipe[apps::alfred]",
         "recipe[apps::chrome]",
         "recipe[apps::dropbox]",
+        "recipe[apps::emacs]",
         "recipe[apps::grandperspective]",
+        "recipe[apps::macvim]",
         "recipe[apps::virtualbox]",
         "recipe[apps::vlc]",
 
@@ -34,15 +36,9 @@
             "autoconf",
             "automake",
             "dos2unix",
-            {
-                "package": "emacs",
-                "head": true,
-                "args": "--cocoa --srgb --use-git-head"
-            },
             "git",
             "gnupg",
             "hub",
-            "macvim",
             "ispell",
             "md5sha1sum",
             "p7zip",
