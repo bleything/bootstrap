@@ -22,8 +22,8 @@ include_recipe 'homebrew'
 package "macvim"
 
 git "#{ENV['HOME']}/.vim" do
-  repository node.dotvim_repo
-  only_if { node.dotvim_repo }
+  repository node.macvim.config_repo
+  only_if { node.macvim.config_repo }
 end
 
 macvim_prefix = `brew --prefix macvim`.strip

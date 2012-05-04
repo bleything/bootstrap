@@ -26,8 +26,8 @@ execute "install emacs" do
 end
 
 git "#{ENV['HOME']}/.emacs.d" do
-  repository node.dotemacs_repo
-  only_if { node.dotemacs_repo }
+  repository node.emacs.config_repo
+  only_if { node.emacs.config_repo }
 end
 
 link "/Applications/Emacs.app" do

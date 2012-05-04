@@ -1,1 +1,1 @@
-default.dotemacs_repo = nil
+default.emacs.config_repo = nil

@@ -1,1 +1,1 @@
-default.dotvim_repo = nil
+default.macvim.config_repo = nil
