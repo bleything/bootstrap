@@ -9,4 +9,6 @@ if [ -e "/etc/profile" ]; then
 fi
 
 ### source all the various stuff others have dropped in
-source ~/.bash.d/*
+for rc in `ls ~/.bash.d`; do
+    source ~/.bash.d/$rc
+done
