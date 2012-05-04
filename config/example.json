@@ -23,6 +23,7 @@
         "recipe[config::sshd]",
 
         "recipe[homebrew]",
+        "recipe[homebrew::environment]"
         "recipe[homebrew::taps]",
         "recipe[homebrew::packages]"
     ],

@@ -1,0 +1,7 @@
+### set PATH to include homebrew
+PATH=/usr/local/bin:$PATH
+
+### homebrew completion
+if [ -f /usr/local/etc/bash_completion ]; then
+    source /usr/local/etc/bash_completion
+fi
