@@ -65,5 +65,9 @@
 
         "version": "3.8.12",
         "checksum": "9e7ad33a876ce9a5d1a63438d95619ca0e3240af"
+    },
+
+    "sublime_text": {
+        "license": "1111\n2222\n3333"
     }
 }
