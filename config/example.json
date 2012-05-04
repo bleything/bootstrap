@@ -7,6 +7,7 @@
         "recipe[apps::chrome]",
         "recipe[apps::dropbox]",
         "recipe[apps::emacs]",
+        "recipe[apps::gcc]",
         "recipe[apps::grandperspective]",
         "recipe[apps::macvim]",
         "recipe[apps::virtualbox]",
@@ -27,13 +28,8 @@
     ],
 
     "homebrew": {
-        "taps": [
-            "homebrew/dupes"
-        ],
-
         "packages": [
             "ack",
-            "apple-gcc42",
             "autoconf",
             "automake",
             "dos2unix",

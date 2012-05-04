@@ -1,0 +1,7 @@
+################################################################################
+### This file installed by bootstrap. If you run bootstrap again, you'll lose
+### any changes made here.
+################################################################################
+
+export CC=/usr/local/bin/gcc-4.2
+export CXX=/usr/local/bin/g++-4.2
