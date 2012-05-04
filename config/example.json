@@ -50,6 +50,12 @@
         ]
     },
 
+    "rvm": {
+        "rubies": [
+            "1.9.3"
+        ],
+    },
+
     "resolvers": {
         "example.com": [
             "8.8.8.8",
