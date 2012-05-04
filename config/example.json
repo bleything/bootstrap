@@ -19,6 +19,7 @@
         "recipe[config::hostname]",
         "recipe[config::keyboard]",
         "recipe[config::screensaver]",
+        "recipe[config::sshd]",
 
         "recipe[homebrew]",
         "recipe[homebrew::taps]",
