@@ -1,7 +1,24 @@
 ### set PATH to include homebrew
 PATH=/usr/local/bin:$PATH
 
+### steal the `have` function from the bash-completion package, as some
+### completion scripts expect it to exist.
+#
+# This function checks whether we have a given program on the system.
+# No need for bulky functions in memory if we don't.
+#
+have()
+{
+    unset -v have
+    # Completions for system administrator commands are installed as well in
+    # case completion is attempted via `sudo command ...'.
+    PATH=$PATH:/sbin:/usr/sbin:/usr/local/sbin type $1 &>/dev/null &&
+    have="yes"
+}
+
 ### homebrew completion
-if [ -f /usr/local/etc/bash_completion ]; then
-    source /usr/local/etc/bash_completion
+if [ -d /usr/local/etc/bash_completion.d ]; then
+   for rc in `find /usr/local/etc/bash_completion.d -type l -or -type f`; do
+     source $rc
+   done
 fi
