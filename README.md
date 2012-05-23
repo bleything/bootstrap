@@ -24,8 +24,8 @@ avoid this as much as possible, but with some things (.mpkg installers)
 it's just not possible. You may want to edit your sudoers file to set
 `NOPASSWD` on your user.
 
-You'll want to run `sudo visudo` and change `%admin»·ALL=(ALL) ALL` to
-`%admin»·ALL=(ALL) NOPASSWD:ALL`. Save the file, and verify it works by
+You'll want to run `sudo visudo` and change `%admin ALL=(ALL) ALL` to
+`%admin ALL=(ALL) NOPASSWD:ALL`. Save the file, and verify it works by
 `sudo -k && sudo -l`. You should not be prompted for a password.
 
 How Do?
