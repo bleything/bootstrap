@@ -1,5 +1,10 @@
+################################################################################
+### This file installed by bootstrap. If you run bootstrap again, you'll lose
+### any changes made here.
+################################################################################
+
 ### set PATH to include homebrew
-PATH=/usr/local/bin:$PATH
+PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 ### steal the `have` function from the bash-completion package, as some
 ### completion scripts expect it to exist.
