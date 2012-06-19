@@ -19,8 +19,8 @@
 #
 
 include_recipe 'homebrew'
-include_recipe 'homebrew::taps'
 
+homebrew_tap "homebrew/dupes"
 package "apple-gcc42"
 directory "#{ENV['HOME']}/.bash.d"
 cookbook_file "#{ENV['HOME']}/.bash.d/gcc"
