@@ -2,15 +2,14 @@
     "hostname": "example",
 
     "run_list": [
+        "role[dev]",
+        "role[homebrew]",
+
         "recipe[apps::1password]",
         "recipe[apps::alfred]",
         "recipe[apps::chrome]",
         "recipe[apps::dropbox]",
-        "recipe[apps::emacs]",
-        "recipe[apps::gcc]",
         "recipe[apps::grandperspective]",
-        "recipe[apps::macvim]",
-        "recipe[apps::virtualbox]",
         "recipe[apps::vlc]",
 
         "recipe[config::dock]",
@@ -20,30 +19,15 @@
         "recipe[config::hostname]",
         "recipe[config::keyboard]",
         "recipe[config::screensaver]",
-        "recipe[config::sshd]",
-
-        "recipe[homebrew]",
-        "recipe[homebrew::environment]"
-        "recipe[homebrew::packages]"
+        "recipe[config::sshd]"
     ],
 
     "homebrew": {
         "packages": [
-            "ack",
-            "autoconf",
-            "automake",
-            "dos2unix",
-            "git",
-            "gnupg",
-            "hub",
             "ispell",
-            "md5sha1sum",
             "p7zip",
             "par",
-            "pstree",
             "s3cmd",
-            "tmux",
-            "tree",
             "unison",
             "unrar"
         ]
