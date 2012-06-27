@@ -20,6 +20,7 @@
 
 directory "#{ENV['HOME']}/.bash.d"
 cookbook_file "#{ENV['HOME']}/.bash.d/README"
+cookbook_file "#{ENV['HOME']}/.bash.d/path"
 
 cookbook_file "#{ENV['HOME']}/.bash_profile" do
   source "dot-bash_profile"

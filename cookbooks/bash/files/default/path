@@ -1,0 +1,35 @@
+############################################################## -*- mode: sh -*-
+### This file installed by bootstrap. If you run bootstrap again, you'll lose
+### any changes made here.
+################################################################################
+
+PATH=${HOME}/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
+
+# A faster version of which, that also prints ALL versions in your PATH,
+# and accepts wildcards, e.g.: which '*uu*'. Silent if nothing found.
+# Only works if test -x works...
+#
+# Modifyed by davida to only return the first match
+#
+# Stolen from Michael Granger <ged@FaerieMUD.org>
+#
+function which() {
+    case $# in
+        0) echo Usage: which cmd ...; return 1;;
+    esac
+
+    dirs=`echo $PATH|sed 's/^:/. /
+    s/:$/ ./
+    s/::/ . /g
+    s/:/ /g'`
+
+    for cmd; do
+        for d in $dirs; do
+            for file in $d/$cmd ; do
+                if test -x $file -a ! -d $file ; then
+                    echo $file
+                fi
+            done
+        done
+    done
+}

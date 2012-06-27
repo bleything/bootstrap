@@ -3,9 +3,6 @@
 ### any changes made here.
 ################################################################################
 
-### set PATH to include homebrew
-PATH=/usr/local/bin:/usr/local/sbin:$PATH
-
 ### steal the `have` function from the bash-completion package, as some
 ### completion scripts expect it to exist.
 #
