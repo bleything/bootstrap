@@ -32,6 +32,7 @@ if node.alfred.attribute?('sync_folder')
   end
 end
 
+directory "#{ENV['HOME']}/Library/Application Support/Alfred"
 template "#{ENV['HOME']}/Library/Application Support/Alfred/license.plist" do
   action :create_if_missing
   source "alfred-license.plist.erb"
@@ -39,6 +40,6 @@ end
 
 dmg_package 'Alfred' do
   volumes_dir 'Alfred.app'
-  source      'http://rwc.cachefly.net/alfred_1.0_179.dmg'
-  checksum    '21d97cd7cb4b6e5d89ad041f012217ee0c392d06'
+  source      'http://cachefly.alfredapp.com/alfred_1.3_249.dmg'
+  checksum    '9be8cdb4d4072d635070023cef910467db96fb18'
 end
