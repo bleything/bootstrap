@@ -21,7 +21,7 @@
 include_recipe 'homebrew'
 
 execute "install emacs" do
-  command "brew install emacs --HEAD --use-git-head --cocoa --srgb"
+  command "brew install emacs --cocoa --srgb"
   not_if { ::File.directory? "/usr/local/Cellar/emacs" }
 end
 
