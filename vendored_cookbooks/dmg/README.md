@@ -3,19 +3,6 @@ Description
 
 Lightweight resource and provider to install OS X applications (.app) from dmg files.
 
-Changes
-=======
-
-## v0.7.0:
-
-* [COOK-854] - use `cp -R` instead of `cp -r`
-* [COOK-855] - specify a file or directory to check for prior install
-
-## v0.6.0:
-
-* option to install software that is an .mpkg inside a .dmg
-* ignore failure on chmod in case mode is already set, or is root owned
-
 Requirements
 ============
 
@@ -33,7 +20,7 @@ This resource will install a DMG "Package". It will retrieve the DMG from a remo
 
     knife exec -E 'p Chef::Config[:file_cache_path]' -c /etc/chef/client.rb
 
-Optionally, the LWRP can install an "mpkg" package using installer(8).
+Optionally, the LWRP can install an "mpkg" or "pkg" package using installer(8).
 
 # Actions:
 
@@ -45,9 +32,12 @@ Optionally, the LWRP can install an "mpkg" package using installer(8).
 * `source` - remote URL for the dmg to download if specified. Default is nil.
 * `destination` - directory to copy the .app into. Default is /Applications.
 * `checksum` - sha256 checksum of the dmg to download. Default is nil.
-* `type` - type of package, "app" or "mpkg". Default is "app". When using "mpkg", the destination must be /Applications.
+* `type` - type of package, "app", "pkg" or "mpkg". Default is "app". When using "pkg" or "mpkg", the destination must be /Applications.
 * `volumes_dir` - Directory under /Volumes where the dmg is mounted. Not all dmgs are mounted into a /Volumes location matching the name of the dmg. If not specified, this will use the name attribute.
+* `package_id` - Package id registered with pkgutil when a pkg or mpkg is installed
 * `dmg_name` - Specify the name of the dmg if it is not the same as `app`, or if the name has spaces.
+* `dmg_passphrase` - Specify a passphrase to use to unencrypt the dmg while mounting.
+* `accept_eula` - Specify whether to accept the EULA.  Certain dmgs require acceptance of EULA before mounting.  Can be true or false, defaults to false.
 
 Usage Examples
 ==============
@@ -94,6 +84,31 @@ Install Virtualbox to `/Applications` from the .mpkg:
       type "mpkg"
     end
 
+Install pgAdmin to `/Applications` and automatically accept the EULA:
+
+    dmg_package "pgAdmin3" do
+      source "http://wwwmaster.postgresql.org/redir/198/h/pgadmin3/release/v1.12.3/osx/pgadmin3-1.12.3.dmg"
+      checksum "9435f79d5b52d0febeddfad392adf82db9df159196f496c1ab139a6957242ce9"
+      accept_eula true
+    end
+
+Install Pivotal Tracker to `/Applications` using a password-protected dmg:
+
+    dmg_package "Pivotal Tracker" do
+      volumes_dir "tracker"
+      source "http://cheffiles.pivotallabs.com/fluid_tracker.dmg"
+      dmg_passphrase  "xyz"
+    end
+
+Install Silverlight, with idempotence check based on pkgutil:
+
+    dmg_package "Silerlight" do
+      source "http://silverlight.dlservice.microsoft.com/download/D/C/2/DC2D5838-9138-4D25-AA92-52F61F7C51E6/runtime/Silverlight.dmg"
+      type "pkg"
+      checksum "6d4a0ad4552d9815531463eb3f467fb8cf4bffcc"
+      package_id "com.microsoft.installSilverlightPlugin"
+    end
+
 To do
 =====
 
@@ -123,3 +138,4 @@ Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
+limitations under the License.

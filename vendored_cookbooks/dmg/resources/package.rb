@@ -26,7 +26,9 @@ attribute :volumes_dir, :kind_of => String, :default => nil
 attribute :dmg_name, :kind_of => String, :default => nil
 attribute :type, :kind_of => String, :default => "app"
 attribute :installed, :kind_of => [TrueClass, FalseClass], :default => false
-attribute :installed_resource, :kind_of => String, :default => nil
+attribute :package_id, :kind_of => String, :default => nil
+attribute :dmg_passphrase, :kind_of => String, :default => nil
+attribute :accept_eula, :kind_of => [TrueClass, FalseClass], :default => false
 
 def initialize(name, run_context=nil)
   super
