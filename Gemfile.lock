@@ -1,7 +1,7 @@
 GEM
   remote: http://rubygems.org/
   specs:
-    bunny (0.7.9)
+    bunny (0.8.0)
     chef (10.12.0)
       bunny (>= 0.6.0)
       erubis
@@ -24,7 +24,7 @@ GEM
     highline (1.6.13)
     ipaddress (0.8.0)
     json (1.6.1)
-    mime-types (1.18)
+    mime-types (1.19)
     mixlib-authentication (1.1.4)
       mixlib-log
     mixlib-cli (1.2.2)
@@ -48,11 +48,11 @@ GEM
     polyglot (0.3.3)
     rest-client (1.6.7)
       mime-types (>= 1.16)
-    systemu (2.5.1)
+    systemu (2.5.2)
     treetop (1.4.10)
       polyglot
       polyglot (>= 0.3.1)
-    uuidtools (2.1.2)
+    uuidtools (2.1.3)
     yajl-ruby (1.1.0)
 
 PLATFORMS
