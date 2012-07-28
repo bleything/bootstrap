@@ -17,6 +17,7 @@
 # limitations under the License.
 #
 
+directory("/usr/local/etc/bash_completion.d") { recursive true }
 link "/usr/local/etc/bash_completion.d/homebrew" do
   to "/usr/local/Library/Contributions/brew_bash_completion.sh"
 end
