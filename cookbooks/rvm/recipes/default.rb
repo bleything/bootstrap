@@ -19,12 +19,12 @@
 
 remote_file "/tmp/rvm-installer" do
   source "http://get.rvm.io"
-  not_if { ::File.directory? "#{ENV['HOME']}/.rvm" }
+  not_if { ::File.file? "#{ENV['HOME']}/.rvm/bin/rvm" }
 end
 
 execute "rvm-installer" do
   command "bash -s master < /tmp/rvm-installer"
-  not_if { ::File.directory? "#{ENV['HOME']}/.rvm" }
+  not_if { ::File.file? "#{ENV['HOME']}/.rvm/bin/rvm" }
 end
 
 file "#{ENV['HOME']}/.rvm/gemsets/global.gems" do
@@ -32,6 +32,4 @@ file "#{ENV['HOME']}/.rvm/gemsets/global.gems" do
 end
 
 directory "#{ENV['HOME']}/.bash.d"
-cookbook_file "#{ENV['HOME']}/.bash.d/rvm" do
-  not_if { ::File.exists? "#{ENV['HOME']}/.bash.d/rvm" }
-end
+cookbook_file "#{ENV['HOME']}/.bash.d/rvm"
