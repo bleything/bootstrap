@@ -25,8 +25,3 @@ git "#{ENV['HOME']}/.vim" do
   repository node.macvim.config_repo
   only_if { node.macvim.config_repo }
 end
-
-macvim_prefix = `brew --prefix macvim`.strip
-link "/Applications/MacVim.app" do
-  to "#{macvim_prefix}/MacVim.app"
-end

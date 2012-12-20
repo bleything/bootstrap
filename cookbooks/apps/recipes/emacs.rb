@@ -29,7 +29,3 @@ git "#{ENV['HOME']}/.emacs.d" do
   repository node.emacs.config_repo
   only_if { node.emacs.config_repo }
 end
-
-link "/Applications/Emacs.app" do
-  to "/usr/local/Cellar/emacs/HEAD/Emacs.app"
-end
