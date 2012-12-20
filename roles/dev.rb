@@ -7,7 +7,6 @@ run_list %w{
   recipe[apps::gcc]
   recipe[apps::emacs]
   recipe[apps::macvim]
-  recipe[apps::virtualbox]
 }
 
 default_attributes(
