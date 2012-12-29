@@ -22,5 +22,5 @@ link "/usr/local/etc/bash_completion.d/homebrew" do
   to "/usr/local/Library/Contributions/brew_bash_completion.sh"
 end
 
-directory "#{ENV['HOME']}/.bash.d"
+include_recipe 'bash'
 cookbook_file "#{ENV['HOME']}/.bash.d/homebrew"
