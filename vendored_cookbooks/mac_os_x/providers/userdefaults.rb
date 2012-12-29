@@ -50,6 +50,8 @@ action :write do
 
     type = new_resource.type
     value = "'#{new_resource.value}'"
+    value = "\"#{value}\"" if value.include? ' '
+
     case new_resource.value
     when TrueClass, FalseClass
       type ||= 'bool'
