@@ -22,5 +22,8 @@ link "/usr/local/etc/bash_completion.d/homebrew" do
   to "/usr/local/Library/Contributions/brew_bash_completion.sh"
 end
 
+# the ack completion script is broken so remove it for now
+link("/usr/local/etc/bash_completion.d/ack.bash_completion.sh") { action :delete }
+
 include_recipe 'bash'
 cookbook_file "#{ENV['HOME']}/.bash.d/homebrew"
