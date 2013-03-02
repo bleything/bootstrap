@@ -20,7 +20,7 @@
 include_recipe 'rvm::default'
 include_recipe 'apps::gcc' # need to get an unbroken gcc
 
-node.rvm.rubies.each do |ruby|
+node.rubies.each do |ruby|
   execute "rvm install #{ruby}" do
     environment "CC"  => "/usr/local/bin/gcc-4.2",
                 "CXX" => "/usr/local/bin/g++-4.2"

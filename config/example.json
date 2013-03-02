@@ -33,11 +33,9 @@
         ]
     },
 
-    "rvm": {
-        "rubies": [
-            "1.9.3"
-        ],
-    },
+    "rubies": [
+        "1.9.3-p392"
+    ],
 
     "resolvers": {
         "example.com": [
