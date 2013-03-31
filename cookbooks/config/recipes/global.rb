@@ -17,6 +17,9 @@
 # limitations under the License.
 #
 
+# enable 'access for assistive devices' option from the Accessibility prefpane
+execute %q{sudo sh -c 'echo "a" > /private/var/db/.AccessibilityAPIEnabled'}
+
 settings = {
   # expand file and print dialogs
   "NSNavPanelExpandedStateForSaveMode" => true,
